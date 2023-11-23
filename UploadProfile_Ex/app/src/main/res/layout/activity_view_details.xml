@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="25dp">
+    <TextView
+        android:id="@+id/txtDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Employee Details"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30dp"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgShow1"
+        android:layout_marginTop="50dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/users"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        />
+    <TextView
+        android:id="@+id/txtEmpNm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emp Name"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/txtEmpMob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emp Mobile"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/txtEmpEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emp Email"
+        android:textSize="25sp"/>
+
+
+
+
+</LinearLayout>
