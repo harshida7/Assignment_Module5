@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="25dp"
+    android:layout_margin="20dp"
+    app:cardBackgroundColor="#322514">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:weightSum="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_TaskNameD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data1"
+            android:gravity="center"
+            android:textColor="#be1558"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/txt_DateTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dt."
+            android:layout_marginLeft="10dp"
+            android:textColor="#be1558"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/txt_TaskDateD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data2"
+            android:layout_marginLeft="10dp"
+            android:textColor="#fbcbc9"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/txt_CateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cate."
+            android:layout_marginLeft="100dp"
+            android:textColor="#be1558"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/txt_TaskCatD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Data3"
+            android:textColor="#fbcbc9"
+            android:textSize="15dp"/>
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+</LinearLayout>

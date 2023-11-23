@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".AddTaskActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@android:color/holo_purple"
+            app:tabTextColor="#ffc0cb"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/txtUpcomingTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/txtUpdateTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Updated"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/txtRemoveTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Removed"/>
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/txtDoneTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed"/>
+        </com.google.android.material.tabs.TabLayout>
+
+        <!--<androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>-->
+
+        <FrameLayout
+            android:id="@+id/frmDisplayData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </FrameLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/f1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/baseline_add_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            />
+
+
+
+
+    </RelativeLayout>
+</LinearLayout>
