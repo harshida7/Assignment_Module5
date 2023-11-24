@@ -3,17 +3,21 @@ package com.example.uploadprofile_ex
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.retrofit_crud_ex.ApiClient
+import de.hdodenhof.circleimageview.CircleImageView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
+
 
     lateinit var uploadService: UploadService
     lateinit var edtEmail :EditText
@@ -21,6 +25,8 @@ class LoginActivity : AppCompatActivity() {
     lateinit var btnLogin :Button
     lateinit var sharedPreferences: SharedPreferences
     lateinit var sharedPreferencesUser: SharedPreferences
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,7 +66,13 @@ class LoginActivity : AppCompatActivity() {
 
                     Toast.makeText(applicationContext, "Success", Toast.LENGTH_SHORT).show()
                 var i = Intent(applicationContext,ViewDetailsActivity::class.java)
+
+                i.putExtra("emp_mobile", email)
+                i.putExtra("emp_email", pass)
+
                 startActivity(i)
+
+
 
                 }
 

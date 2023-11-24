@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -27,8 +28,8 @@ import java.io.File
 import java.io.FileOutputStream
 
 class UploadProfileActivity : AppCompatActivity() {
-    lateinit var image: CircleImageView
     lateinit var btnsubmit: Button
+    lateinit var image: CircleImageView
     lateinit var imageuri: Uri
     lateinit var edt1: EditText
     lateinit var edt2: EditText
@@ -73,7 +74,10 @@ class UploadProfileActivity : AppCompatActivity() {
 
         btnsubmit.setOnClickListener {
             upload()
-            Toast.makeText(applicationContext, "Record Inserted", Toast.LENGTH_SHORT).show()
+            var i = Intent(applicationContext,ViewDetailsActivity::class.java)
+
+            startActivity(i)
+
         }
 
         val str = txtLogin.text.toString()
@@ -126,14 +130,9 @@ class UploadProfileActivity : AppCompatActivity() {
         }
 
 
-        var i = Intent(applicationContext,ViewDetailsActivity::class.java)
 
-        i.putExtra("img1", part.toString())
-        i.putExtra("emp_name", edt1.text.toString())
-        i.putExtra("emp_mobile", edt2.text.toString())
-        i.putExtra("emp_email", edt3.text.toString())
 
-        startActivity(i)
+     //   Toast.makeText(applicationContext, "img   " + imageuri, Toast.LENGTH_SHORT).show()
     }
 
 
