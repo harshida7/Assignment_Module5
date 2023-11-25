@@ -12,10 +12,6 @@
         "source": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-main-34:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.uploadprofile_ex.app-merged_res-32:/layout_activity_view_details.xml.flat",
-        "source": "com.example.uploadprofile_ex.app-main-34:/layout/activity_view_details.xml"
-    },
-    {
         "merged": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-merged_res-32:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-main-34:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
@@ -76,12 +72,24 @@
         "source": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-main-34:\\drawable\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-merged_res-32:\\drawable_account.png.flat",
+        "source": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-main-34:\\drawable\\account.png"
+    },
+    {
+        "merged": "com.example.uploadprofile_ex.app-merged_res-32:/layout_activity_upload_profile.xml.flat",
+        "source": "com.example.uploadprofile_ex.app-main-34:/layout/activity_upload_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-merged_res-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-merged_res-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-main-34:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.uploadprofile_ex.app-merged_res-32:/layout_activity_update_profile.xml.flat",
+        "source": "com.example.uploadprofile_ex.app-main-34:/layout/activity_update_profile.xml"
     },
     {
         "merged": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-merged_res-32:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -106,6 +114,10 @@
     {
         "merged": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-merged_res-32:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-main-34:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-merged_res-32:\\layout_activity_update_profile.xml.flat",
+        "source": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-main-34:\\layout\\activity_update_profile.xml"
     },
     {
         "merged": "C:\\Users\\Harshida\\.gradle\\daemon\\8.0\\com.example.uploadprofile_ex.app-merged_res-32:\\mipmap-xxxhdpi_ic_launcher.webp.flat",

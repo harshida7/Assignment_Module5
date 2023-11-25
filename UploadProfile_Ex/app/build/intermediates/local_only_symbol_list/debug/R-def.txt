@@ -2,6 +2,7 @@ R_DEF: Internal format may change without notice
 local
 color black
 color white
+drawable account
 drawable baseline_person_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -12,6 +13,8 @@ drawable users
 id already_Acunt_txt
 id btnLogin
 id btnRegister1
+id btnUpdateData
+id btnUpdateProfile
 id btnUpload
 id card1
 id cardLogin
@@ -19,19 +22,29 @@ id cardRegister
 id edtEmail
 id edtPassword
 id email
+id email_update
 id img
 id img1
+id imgProfileView
 id imgShow1
 id linearLogin
 id logout
 id mobile
+id mobile_update
 id name
+id name_update
 id pass
+id pass_update
 id tool1
+id toolUpdate
 id txt1
+id txtEmpemail
+id txtEmpmob
+id txtEmpnm
 id userLoginTxt
 layout activity_login
 layout activity_main
+layout activity_update_profile
 layout activity_upload_profile
 layout activity_view_details
 menu option

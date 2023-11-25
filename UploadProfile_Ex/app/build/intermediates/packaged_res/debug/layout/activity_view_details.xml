@@ -5,19 +5,81 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_margin="25dp">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Employee Details"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        />
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imgShow1"
-        android:layout_marginTop="50dp"
+        android:id="@+id/imgProfileView"
+        android:layout_marginTop="20dp"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:src="@drawable/users"
         android:layout_gravity="center"
-        android:layout_marginBottom="100dp"
+
+        />
+    <TextView
+        android:id="@+id/txtEmpnm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Employee Name"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/txtEmpmob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Employee Mobile"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:id="@+id/txtEmpemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Employee Email"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"/>
+    <Button
+        android:id="@+id/btnUpdateProfile"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Update Profile"/>
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Image"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgShow1"
+
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/users"
+        android:layout_gravity="center"
+
         />
     <Button
         android:id="@+id/btnUpload"
-        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Upload Image"/>
 

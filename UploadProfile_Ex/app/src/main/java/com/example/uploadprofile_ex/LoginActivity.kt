@@ -36,11 +36,11 @@ class LoginActivity : AppCompatActivity() {
         sharedPreferencesUser = getSharedPreferences("USER_SESSION", Context.MODE_PRIVATE)
 
         if (sharedPreferences.getBoolean("SESSION", false) && !sharedPreferences.getString("empemail", "")!!.isEmpty()) {
-            startActivity(Intent(this, ViewDetailsActivity::class.java))
+            startActivity(Intent(applicationContext, ViewDetailsActivity::class.java))
             finish()
         }
-        if (sharedPreferencesUser.getBoolean("USER_SESSION", false) && !sharedPreferencesUser.getString("empemail", "")!!.isEmpty()) {
-            startActivity(Intent(this, ViewDetailsActivity::class.java))
+        if (sharedPreferencesUser.getBoolean("USER_SESSION", false) && !sharedPreferencesUser.getString("emailuser", "")!!.isEmpty()) {
+            startActivity(Intent(applicationContext, ViewDetailsActivity::class.java))
             finish()
         }
 
@@ -60,20 +60,10 @@ class LoginActivity : AppCompatActivity() {
         {
 
             override fun onResponse(call: Call<Model>, response: Response<Model>) {
-
-                sharedPreferences.edit().putString("empemail",email).apply()
-                sharedPreferences.edit().putBoolean("USER_SESSION", true).apply()
-
-                    Toast.makeText(applicationContext, "Success", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Success", Toast.LENGTH_SHORT).show()
                 var i = Intent(applicationContext,ViewDetailsActivity::class.java)
-
-                i.putExtra("emp_mobile", email)
-                i.putExtra("emp_email", pass)
-
                 startActivity(i)
-
-
-
+                val call:Call<Model> = uploadService.viewData(email,pass)
                 }
 
             override fun onFailure(call: Call<Model>, t: Throwable) {
@@ -83,10 +73,11 @@ class LoginActivity : AppCompatActivity() {
         })
             var editor: SharedPreferences.Editor = sharedPreferencesUser.edit()
             editor.putBoolean("USER_SESSION",true)
-            editor.putString("empemail",email)
-            editor.putString("emp_pass",pass)
+            editor.putString("emailuser",email)
+            editor.putString("passuser",pass)
             editor.commit()
     }
+
     }
 }
 

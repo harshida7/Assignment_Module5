@@ -58,8 +58,8 @@ class UploadProfileActivity : AppCompatActivity() {
             startActivity(i)
             finish()
         }
-        if (sharedPreferencesUser.getBoolean("USER_SESSION", false) && !sharedPreferencesUser.getString("empemail", "")!!.isEmpty()) {
-            startActivity(Intent(this, ViewDetailsActivity::class.java))
+        if (sharedPreferencesUser.getBoolean("USER_SESSION", false) && !sharedPreferencesUser.getString("emailuser", "")!!.isEmpty()) {
+            startActivity(Intent(applicationContext, ViewDetailsActivity::class.java))
             finish()
         }
         txtLogin = findViewById(R.id.userLoginTxt)
@@ -75,6 +75,9 @@ class UploadProfileActivity : AppCompatActivity() {
         btnsubmit.setOnClickListener {
             upload()
             var i = Intent(applicationContext,ViewDetailsActivity::class.java)
+            i.putExtra("nm", edt1.text.toString())
+            i.putExtra("mob", edt2.text.toString())
+            i.putExtra("image1", imageuri.toString())
 
             startActivity(i)
 
@@ -87,7 +90,10 @@ class UploadProfileActivity : AppCompatActivity() {
         txtLogin.text = spannstr
 
         txtLogin.setOnClickListener {
-            startActivity(Intent(applicationContext, LoginActivity::class.java))
+
+
+            var i = Intent(applicationContext,LoginActivity::class.java)
+            startActivity(i)
         }
 
     }
@@ -121,18 +127,16 @@ class UploadProfileActivity : AppCompatActivity() {
 
         var editor: SharedPreferences.Editor = sharedPreferences.edit()
         editor.putBoolean("SESSION", true)
-        editor.putString("empemail", email1.toString())
+        editor.putString("empemail", edt3.text.toString())
         editor.putString("emp_pass", pass1.toString())
         editor.commit()
+
+
 
         CoroutineScope(Dispatchers.IO).launch {
             val response = retrofit.uploadImage(part, name1, mobile1, email1, pass1)
         }
 
-
-
-
-     //   Toast.makeText(applicationContext, "img   " + imageuri, Toast.LENGTH_SHORT).show()
     }
 
 

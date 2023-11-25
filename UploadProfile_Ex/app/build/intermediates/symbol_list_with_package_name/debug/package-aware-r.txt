@@ -2941,6 +2941,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable account
 drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_person_24
@@ -3151,6 +3152,8 @@ id bounceEnd
 id bounceStart
 id btnLogin
 id btnRegister1
+id btnUpdateData
+id btnUpdateProfile
 id btnUpload
 id buttonPanel
 id cache_measures
@@ -3233,6 +3236,7 @@ id edtEmail
 id edtPassword
 id elastic
 id email
+id email_update
 id embed
 id end
 id endToStart
@@ -3280,6 +3284,7 @@ id ignoreRequest
 id image
 id img
 id img1
+id imgProfileView
 id imgShow1
 id immediateStop
 id included
@@ -3333,6 +3338,7 @@ id message
 id middle
 id mini
 id mobile
+id mobile_update
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3365,6 +3371,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id name
+id name_update
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3410,6 +3417,7 @@ id parentPanel
 id parentRelative
 id parent_matrix
 id pass
+id pass_update
 id password_toggle
 id path
 id pathRelative
@@ -3529,6 +3537,7 @@ id titleDividerNoCustom
 id title_template
 id toggle
 id tool1
+id toolUpdate
 id top
 id topPanel
 id touch_outside
@@ -3541,6 +3550,9 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id txt1
+id txtEmpemail
+id txtEmpmob
+id txtEmpnm
 id unchecked
 id uniform
 id unlabeled
@@ -3681,6 +3693,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
 layout activity_main
+layout activity_update_profile
 layout activity_upload_profile
 layout activity_view_details
 layout custom_dialog

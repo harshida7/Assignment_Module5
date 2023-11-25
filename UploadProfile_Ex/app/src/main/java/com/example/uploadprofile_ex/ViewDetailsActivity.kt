@@ -39,15 +39,21 @@ class ViewDetailsActivity : AppCompatActivity() {
 
 
     lateinit var image: CircleImageView
+    lateinit var imageView: CircleImageView
     lateinit var imageuri: Uri
     lateinit var uploadService: UploadService
     lateinit var btnUpload:Button
+    lateinit var txtnm:TextView
+    lateinit var txtmob:TextView
+    lateinit var txtemail:TextView
+    lateinit var btnUpdateProfile:Button
 
 
     private val contract = registerForActivityResult(ActivityResultContracts.GetContent())
     {
         imageuri = it!!
         image.setImageURI(it)
+        imageView.setImageURI(it)
     }
 
     @SuppressLint("MissingInflatedId")
@@ -60,9 +66,72 @@ class ViewDetailsActivity : AppCompatActivity() {
         sharedPreferencesUser = getSharedPreferences("USER_SESSION", Context.MODE_PRIVATE)
 
         image = findViewById(R.id.imgShow1)
+        imageView = findViewById(R.id.imgProfileView)
         btnUpload = findViewById(R.id.btnUpload)
+        btnUpdateProfile = findViewById(R.id.btnUpdateProfile)
+        txtnm = findViewById(R.id.txtEmpnm)
+        txtmob = findViewById(R.id.txtEmpmob)
+        txtemail = findViewById(R.id.txtEmpemail)
+
+
         uploadService = ApiClient.getretrofit().create(UploadService::class.java)
 
+        if (sharedPreferencesUser.getBoolean("USER_SESSION", false) && !sharedPreferencesUser.getString("emailuser", "")!!.isEmpty()) {
+
+            val email1 = sharedPreferencesUser.getString("emailuser", "")
+            val pass1 = sharedPreferencesUser.getString("userpass", "")
+
+            uploadService= ApiClient.getretrofit()!!.create(UploadService::class.java)
+
+            val intent = intent
+            val img = intent.getStringExtra("image1")
+            val fname = intent.getStringExtra("nm")
+            val phone = intent.getStringExtra("mob")
+
+            Picasso.get().load(img).placeholder(R.drawable.profile).into(imageView)
+            txtnm.setText(fname)
+            txtemail.setText(email1)
+            txtmob.setText(phone)
+
+            Toast.makeText(applicationContext, "Session User  ", Toast.LENGTH_LONG).show()
+
+            var call: Call<Model> = uploadService.viewData(email1,pass1)
+
+        }
+
+        if (sharedPreferences.getBoolean("SESSION", false) && !sharedPreferences.getString("empemail", "")!!.isEmpty()) {
+
+            val email = sharedPreferences.getString("empemail", "1")
+            val pass = sharedPreferences.getString("emp_pass", "1")
+
+            uploadService= ApiClient.getretrofit()!!.create(UploadService::class.java)
+
+            val intent = intent
+            val img = intent.getStringExtra("image1")
+            val fname = intent.getStringExtra("nm")
+            val phone = intent.getStringExtra("mob")
+
+            Picasso.get().load(img).placeholder(R.drawable.profile).into(imageView)
+            txtnm.setText(fname)
+            txtemail.setText(email)
+            txtmob.setText(phone)
+
+            Toast.makeText(applicationContext, "Session Admin", Toast.LENGTH_SHORT).show()
+
+            var call: Call<Model> = uploadService.viewData(email,pass)
+
+          /*  call.enqueue(object:Callback<Model>{
+                override fun onResponse(call: Call<Model>, response: Response<Model>) {
+                    Toast.makeText(applicationContext,"Done", Toast.LENGTH_LONG).show()
+
+
+                }
+                override fun onFailure(call: Call<Model>, t: Throwable) {
+                    // Toast.makeText(applicationContext,"No Internet", Toast.LENGTH_LONG).show()
+                }
+            })
+*/
+        }
 
         image.setOnClickListener { contract.launch("image/*") }
         btnUpload.setOnClickListener {
@@ -70,17 +139,15 @@ class ViewDetailsActivity : AppCompatActivity() {
             upload()
             Toast.makeText(applicationContext, "Done", Toast.LENGTH_SHORT).show()
         }
-        var call: Call<Model> = uploadService.view()
 
-        call.enqueue(object:Callback<Model>{
-            override fun onResponse(call: Call<Model>, response: Response<Model>) {
-                //Toast.makeText(applicationContext,"Done", Toast.LENGTH_LONG).show()
 
-            }
-            override fun onFailure(call: Call<Model>, t: Throwable) {
-               // Toast.makeText(applicationContext,"No Internet", Toast.LENGTH_LONG).show()
-            }
-        })
+
+
+        btnUpdateProfile.setOnClickListener {
+
+
+            startActivity(Intent(applicationContext,UpdateProfileActivity::class.java))
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean
